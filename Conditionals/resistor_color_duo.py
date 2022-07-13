@@ -1,4 +1,17 @@
+'''
+This module is to complete the color duo exercise on exercism
+'''
+
 def value(*colors):
+    '''
+    This is a function to determine the resistence value by taking the color of the
+    first two resisters in a list. e.g. resistor 1 value = 1 and resistor 2 value =
+    6 the total resistence value would equal 16.
+    
+    :param color: list - an unknown number of colors representing resistors.
+    :return: int - the total reistence value
+    '''
+
     bands = [0,0]
 
     if colors[0][0] == 'black':
@@ -46,3 +59,27 @@ def value(*colors):
     resistance_value = f'{bands[0]}{bands[1]}'
 
     return int(resistance_value)
+
+#An alternate and more efficent way to do the above.
+color_dict = {
+                'black': 0,
+                'brown': 1,
+                'red': 2,
+                'orange': 3,
+                'yellow': 4,
+                'green': 5,
+                'blue': 6,
+                'violet': 7,
+                'grey': 8,
+                'white': 9
+              }
+def value2(colors):
+    '''
+    This is a function to determine the resistence value by taking the color of the
+    first two resisters in a list. e.g. resistor 1 value = 1 and resistor 2 value =
+    6 the total resistence value would equal 16.
+    
+    :param color: list - an unknown number of colors representing resistors.
+    :return: int - the total reistence value
+    '''
+    return int(str(color_dict[colors[0]]) + str(color_dict[colors[1]]))
