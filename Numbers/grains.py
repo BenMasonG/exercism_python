@@ -1,7 +1,7 @@
 def square(number):
     '''
-    The function calculates the number of grains of wheat on a specific 
-    square of the chesssboard given that the number of grain on each 
+    The function calculates the number of grains of wheat on a specific
+    square of the chesssboard given that the number of grain on each
     square doubles.
 
     :param number: int - the square to calculate how much grain is on it.
@@ -10,7 +10,7 @@ def square(number):
     on_square = 1
     if number < 1 or number > 64:
         raise ValueError('square must be between 1 and 64')
-    for n in range (1, number):
+    for num in range (1, number):
         on_square *= 2
     return on_square
 
@@ -20,8 +20,8 @@ def total():
     given that the number of grain on each square doubles.
     '''
     on_square = 1
-    total = []
-    for n in range (1, 65):
-        total.append(on_square)
+    total_grains = []
+    for num in range (1, 65):
+        total_grains.append(on_square)
         on_square *= 2
-    return sum(total)
+    return sum(total_grains)
