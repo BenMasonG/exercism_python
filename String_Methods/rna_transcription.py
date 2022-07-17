@@ -1,5 +1,7 @@
 def to_rna(dna_strand):
+
     rna_strand = []
+
     for letter in dna_strand:
         if letter == 'C':
             rna_strand.append(letter.replace('C', 'G'))
